@@ -35,18 +35,18 @@ public class TabletPageLoader : MonoBehaviour //An instance of this class is ins
             currentPage = initialPage; //Assign the currentPage to initialPage.
         }
         currentPage.SetActive(true); //Activate the currentPage.
-        Debug.Log("Starting pageIndex = " + pageIndex);
+        //Debug.Log("Starting pageIndex = " + pageIndex);
     }
 
     public void LoadSpecificPage(int index) //Function that accepts an integer value and uses it to load the page with the corresponding index value in pages.
     { //Called via UnityEvent when user presses a button on the tablet.
-        Debug.Log("LoadSpecificPage called when pageIndex = " + pageIndex);
+        //Debug.Log("LoadSpecificPage called when pageIndex = " + pageIndex);
         if (pages[index] != null) //Ensure that the passed index value corresponds to a page in the list.
         {
             currentPage.SetActive(false); //Deactivate the current page.
             pageIndex = index; //Set pageIndex to the passed index value.
             currentPage = pages[pageIndex]; //Assign currentPage to the page with the passed index in the list of pages.
-            Debug.Log("LoadSpecificPage calling PageDelayCoroutine with pageIndex = " + pageIndex);
+            //Debug.Log("LoadSpecificPage calling PageDelayCoroutine with pageIndex = " + pageIndex);
             StartCoroutine(PageDelayCoroutine()); //Trigger PageDelayCoroutine(), which activates the new currentPage after a short delay.
         }
     }
@@ -54,27 +54,27 @@ public class TabletPageLoader : MonoBehaviour //An instance of this class is ins
 
     public void LoadNextPage() //Function that loads the next page in the ordered list of pages.
     { //Called via UnityEvent when user presses a button on the tablet.
-        Debug.Log("LoadNextPage() called with pageIndex = " + pageIndex);
+        //Debug.Log("LoadNextPage() called with pageIndex = " + pageIndex);
         if (pageIndex < pages.Count - 1) //Ensure that there is a next page before trying to load it.
         {
             currentPage.SetActive(false); //Deactivate the currentPage.
             pageIndex++; //Increment pageIndex to match the index of the next page in the list of pages.
             currentPage = pages[pageIndex]; //Assign currentPage to the next page in the list.
-            Debug.Log("LoadNextPage() calling PageDelayCoroutine with pageIndex = " + pageIndex);
+            //Debug.Log("LoadNextPage() calling PageDelayCoroutine with pageIndex = " + pageIndex);
             StartCoroutine(PageDelayCoroutine()); //Trigger PageDelayCoroutine(), which activates the new currentPage after a short delay.
         }
     }
 
     public void LoadPreviousPage() //Function that loads the previous page in the ordered list of pages. It can be invoked by a UnityEvent.
     { //Called via UnityEvent when user presses a button on the tablet.
-        Debug.Log("LoadPreviousPage() called with pageIndex = " + pageIndex);
+        //Debug.Log("LoadPreviousPage() called with pageIndex = " + pageIndex);
         if (pageIndex > 0) //Ensure that there is a previous page before trying to load it.
         {
-            Debug.Log("Page Index before loading previous page = " + pageIndex);
+            //Debug.Log("Page Index before loading previous page = " + pageIndex);
             currentPage.SetActive(false); //Deactivate the current page.
             pageIndex--; //Decrement pageIndex to match the index of the previous page in the list of pages.
             currentPage = pages[pageIndex]; //Assign currentPage to the previous page in the list of pages.
-            Debug.Log("LoadPreviousPage() calling PageDelayCoroutine with pageIndex = " + pageIndex);
+            //Debug.Log("LoadPreviousPage() calling PageDelayCoroutine with pageIndex = " + pageIndex);
             StartCoroutine(PageDelayCoroutine()); //Trigger PageDelayCoroutine(), which activates the new currentPage after a short delay.
         }
     }
@@ -83,6 +83,6 @@ public class TabletPageLoader : MonoBehaviour //An instance of this class is ins
     {//This function is invoked by other functions in this class after they deactivate the currentPage.
         yield return new WaitForSeconds(pageLoadDelay); //Wait for a period of time in seconds that is equal to pageLoadDelay.
         currentPage.SetActive(true); //Activate the new currentPage now that the delay has completed.
-        Debug.Log("PageDelayCoroutine completing with pageIndex = " + pageIndex);
+        //Debug.Log("PageDelayCoroutine completing with pageIndex = " + pageIndex);
     }
 }

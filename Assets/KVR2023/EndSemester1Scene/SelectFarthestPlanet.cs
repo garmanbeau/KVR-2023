@@ -9,7 +9,6 @@ using UnityEngine.Events;
 public class SelectFarthestPlanetTask : TaskBase
 {
     [SerializeField] private VisualAffordance VisualAffordance;
-    private string instructions;
     public UnityEvent selectFarthestPlanetComplete;
     private bool hasGrabbedWhileTaskActive;
     private int incorrectGrabCount;
@@ -17,12 +16,12 @@ public class SelectFarthestPlanetTask : TaskBase
     public void Start()
     {
         incorrectGrabCount = 0;
-        instructions = "Grab the farthest planet in our solar system.";
+        directions = "Grab the farthest planet in our solar system.";
     }
 
     public override void StartTask()
     {
-        textUpdateManager.TriggerTaskTextUpdate(instructions);
+        textUpdateManager.TriggerTaskTextUpdate(directions);
     }
 
     public override void StopTask()//nothing happens when stop task is called.

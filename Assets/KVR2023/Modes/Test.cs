@@ -13,9 +13,6 @@ public class Test : MonoBehaviour
     private bool modeIsActive;
 
 
-
-
-    
     public void StartTask() //Called via UnityEvent by a button on the UI_Tablet test page.
     {
         taskManager.StartCurrentTask();

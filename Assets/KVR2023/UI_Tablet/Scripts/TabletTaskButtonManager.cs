@@ -10,7 +10,7 @@ public class TabletTaskButtonManager : MonoBehaviour
     public List<GameObject> buttons;
     [SerializeField] private GameObject beginButton;
     [SerializeField] private TaskManager taskManager;
-    private float desiredSpacing = .04f;
+    private readonly float desiredSpacing = .04f;
 
     private void Awake()
     {
@@ -30,16 +30,33 @@ public class TabletTaskButtonManager : MonoBehaviour
         taskManager.NextTask();
     }
 
+    public void SubBeginPressed()
+    {
+        foreach (GameObject button in buttons)
+        {
+            button.SetActive(true);
+        }
+        beginButton.SetActive(false);
+        gameObject.GetComponent<HorizontalLayoutGroup>().spacing = desiredSpacing;
+        taskManager.CurrentTask.CompleteEmptySub();
+    }
+
+    public void ResetSubPage()
+    {
+        foreach(GameObject button in buttons)
+        {
+            button.SetActive(false);
+        }
+        beginButton.SetActive(true);
+        gameObject.GetComponent<HorizontalLayoutGroup>().spacing = 0f;
+    }
+
     public void TryToSubmitAssignment()
     {
         bool canSubmit = taskManager.CanSubmitAssignment();
         if (canSubmit)
         {
             submitAssignment?.Invoke();
-        }
-        else
-        {
-            //Eventually add something to make the button red.
         }
     }
 }

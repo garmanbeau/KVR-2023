@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using KVR2023;
+using UnityEngine.Events;
 
 namespace KVR2023
 {
@@ -20,7 +21,7 @@ namespace KVR2023
         private bool isComplete;
         private bool isActive;
 
-        public CurrentTaskTextUpdate(string TaskName, int TaskID, bool IsActive, bool IsComplete) //Constructor called by TaskManager.TextUpdateCurrentTask.
+        public CurrentTaskTextUpdate(string TaskName, int TaskID, bool IsActive, bool IsComplete) //Constructor called by TaskManager and TaskBase functions
         { //Primarily used for code readability.
             taskName = TaskName;
             taskID = TaskID;
@@ -65,11 +66,13 @@ public class TaskManager : MonoBehaviour
     public List<TaskBase> tasks; //List of main tasks.
     public TaskBase CurrentTask { get; set; } //Reference to the current task.
     [SerializeField] private TextUpdateManager textUpdateManager; //Reference to The text update manager. Needed to update text on tablet pages.
-    private string CurrentMode { get; set; } //Reference to the current mode.
+    public string CurrentMode { get; set; } //Reference to the current mode.
     private int taskIndex; //Holds the index position of the current task in the list of tasks.
     [SerializeField] private Test test; //reference to test class so taskmanager can call SerializeInteractedObjectsToJSON()
     private bool hasSaved;
     private int numTasksComplete;
+    public UnityEvent parentTaskStarted;
+
 
 
     void Start()
@@ -183,6 +186,7 @@ public class TaskManager : MonoBehaviour
                 if (CurrentTask.IsActive)
                 {
                     CurrentTask.StopTask();
+                    StopAllCoroutines();//ensures there are no ongoing affordances
                 }
                 taskIndex = task.TaskID;
                 CurrentTask = task;
@@ -198,6 +202,7 @@ public class TaskManager : MonoBehaviour
             if(CurrentTask.IsActive)
             {
                 CurrentTask.StopTask();
+                StopAllCoroutines();//ensures there are no ongoing affordances
             }
             NextTask();
         }
@@ -214,6 +219,10 @@ public class TaskManager : MonoBehaviour
         {
             CurrentTask.IsActive = true;
             CurrentTask.StartTask();
+            parentTaskStarted?.Invoke();
+            if (CurrentMode == "Instruction") {
+                StartCoroutine(WaitForAffordanceTime()); //Waits for x amount of specified time before triggering the affordance coroutine.
+            }
         }
         else //Note: The following logic overwrites the task text update.
         {
@@ -226,6 +235,8 @@ public class TaskManager : MonoBehaviour
     { //This text update is currently overwriting the current task text update.  
         CurrentTask.IsComplete = true;
         CurrentTask.IsActive = false;
+        CurrentTask.StopTask();//ensures there are no ongoing affordances
+        StopAllCoroutines();//ensures there are no ongoing affordances
         if (CurrentMode == "Test" && AreAllTasksComplete() && !hasSaved)
         {
             test.SerializeInteractedObjectsToJSON();
@@ -238,6 +249,15 @@ public class TaskManager : MonoBehaviour
         if (CurrentMode != "Sandbox")
         {
             NextTask();
+        }
+    }
+
+    public void SafeTextUpdate()
+    {
+        if (CurrentTask != null && CurrentTask != tasks[0])
+        {
+            TextUpdateCurrentTask();
+            TextUpdateProgress();
         }
     }
 
@@ -262,7 +282,6 @@ public class TaskManager : MonoBehaviour
 
     public void TextUpdateProgress() //Called by other functions in the TaskManager class and a function in the AssignmentComplete class.
     {
-
         TaskProgressUpdate taskProgressUpdate = new TaskProgressUpdate(tasks.Count - 1, numTasksComplete);
         string progressUpdate = taskProgressUpdate.ToString();
         textUpdateManager.TriggerProgressTextUpdate(progressUpdate);
@@ -278,5 +297,12 @@ public class TaskManager : MonoBehaviour
             }
         }
         return true;
+    }
+
+    //Waits for x amount of specified time before triggering the affordance coroutine.
+    private IEnumerator WaitForAffordanceTime()
+    {
+        yield return new WaitForSeconds(CurrentTask.secondsToWaitBeforeAffordances);
+        CurrentTask.affordances?.Invoke();
     }
 }

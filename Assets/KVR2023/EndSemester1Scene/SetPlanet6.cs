@@ -13,19 +13,15 @@ public class SetPlanet6 : TaskBase
     [SerializeField] private GameObject planet6Pedestal;
     [SerializeField] private GameObject Planet6;
 
-    public void Update()
+    private void Start()
     {
-        if (((Planet6.transform.position.x - planet6Pedestal.transform.position.x <= 4) && (planet6Pedestal.transform.position.x - Planet6.transform.position.x <= 4)) &&
-            ((Planet6.transform.position.y - planet6Pedestal.transform.position.y <= 4) && (planet6Pedestal.transform.position.y - Planet6.transform.position.y <= 4)) &&
-            ((Planet6.transform.position.z - planet6Pedestal.transform.position.z <= 4) && (planet6Pedestal.transform.position.z - Planet6.transform.position.z <= 4)) && IsActive)
-        {
-            this.CompleteSub();
-        }
+        directions = "Place the sixth planet in the solar system on platform six.";
     }
 
     public override void StartTask()
     {
         IsActive = true;
+        TextUpdateDirections();
     }
 
     public override void StopTask()//nothing happens when stop task is called.

@@ -32,10 +32,15 @@ public class VisualAffordance : MonoBehaviour, IAffordance
         }
     }
 
+    public void StopAffordance()
+    {
+        StopAllCoroutines();
+        objectRenderer.enabled = true;
+    }
     private IEnumerator FlashHint()
     {
         float flashDuration = 10f;
-        float flashInterval = 0.5f;
+        float flashInterval = 1f;
         bool isVisible = true;
 
         while (flashDuration > 0f)

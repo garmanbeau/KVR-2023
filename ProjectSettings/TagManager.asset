@@ -10,6 +10,14 @@ TagManager:
   - PlatformTypeA
   - PlatformTypeB
   - PlayerFinger
+  - Mercury
+  - Venus
+  - Earth
+  - Mars
+  - Jupiter
+  - Saturn
+  - Uranus
+  - Neptune
   layers:
   - Default
   - TransparentFX

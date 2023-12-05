@@ -24,8 +24,6 @@ namespace KVR2023
 /// </summary>
 public class SelectLargestPlanetTask : TaskBase
 {
-    [SerializeField] private VisualAffordance VisualAffordance;
-    private string instructions;
     public UnityEvent selectLargestPlanetComplete;
     private bool hasGrabbedWhileTaskActive;
     private int incorrectGrabCount;
@@ -33,7 +31,7 @@ public class SelectLargestPlanetTask : TaskBase
     public void Start()
     {
         incorrectGrabCount = 0;
-        instructions = "Grab the largest planet in our solar system.";
+        directions = "Grab the largest planet in our solar system.";
     }
 
     public void PlanetGrabbed(int num)
@@ -74,11 +72,12 @@ public class SelectLargestPlanetTask : TaskBase
 
     public override void StartTask()
     {
-        textUpdateManager.TriggerTaskTextUpdate(instructions);
+        textUpdateManager.TriggerTaskTextUpdate(directions);
     }
 
-    public override void StopTask()//nothing happens when stop task is called.
+    public override void StopTask()//the stop affordance event should contain link to the affordance.StopAffordance
     {
+        stopAffordances?.Invoke();
         return;
     }
 }
