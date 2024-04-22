@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e350f57f1a51d242a304014b212ef10, type: 3}
+  m_Name: BIOS
+  m_EditorClassIdentifier: 
+  question: Why is BIOS important for a computer?
+  wrongAnswers:
+  - ' It enhances the computer''s gaming performance'
+  - ' It acts as the primary security software'
+  - It is responsible for organizing files on the hard drive
+  correctAnswer: ' It ensures proper hardware function  before starting the OS'
+  hint: The BIOS plays a fundamental role in the initial phase of the computer's
+    startup process, especially regarding the system's hardware components.

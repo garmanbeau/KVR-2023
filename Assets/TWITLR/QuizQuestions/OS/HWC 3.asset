@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e350f57f1a51d242a304014b212ef10, type: 3}
+  m_Name: HWC 3
+  m_EditorClassIdentifier: 
+  question: What happens if a problem is detected during the hardware check?
+  wrongAnswers:
+  - ' The computer automatically repairs the hardware'
+  - ' The computer starts normally without any issues'
+  - The computer plays a welcome video
+  correctAnswer: The computer may show an error message or beep sound
+  hint: When something isn't working right, the computer tries to communicate that
+    to the user through some kind of alert.

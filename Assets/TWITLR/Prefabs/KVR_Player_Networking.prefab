@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1445805656150646457
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -2002256985922530865, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: _scenePathHash
+      value: 2746920642
+      objectReference: {fileID: 0}
+    - target: {fileID: -2002256985922530865, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: <SceneId>k__BackingField
+      value: 11797934322792204735
+      objectReference: {fileID: 0}
+    - target: {fileID: -2002256985922530865, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: _networkBehaviours.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2002256985922530865, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: <ChildNetworkObjects>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -63192080733784695, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: _componentIndexCache
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930726272924621931, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: _scenePathHash
+      value: 2746920642
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930726272924621931, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: <SceneId>k__BackingField
+      value: 11797934323505374071
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930726272924621931, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: _networkBehaviours.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930726272924621931, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: <ComponentIndex>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930726272924621931, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: _networkBehaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 8384447159301111253}
+    - target: {fileID: 2930726272924621931, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: <ParentNetworkObject>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386556441619589195, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938642748860851052, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: _componentIndexCache
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923650390544919281, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      propertyPath: m_Name
+      value: KVR_Player_Networking
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8923650390544919281, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1247}
+    - targetCorrespondingSourceObject: {fileID: 8923650390544919281, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6444581355816351972}
+  m_SourcePrefab: {fileID: 100100000, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+--- !u!1 &8054587146392613960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8923650390544919281, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+  m_PrefabInstance: {fileID: 1445805656150646457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054587146392613960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <IsNested>k__BackingField: 0
+  <ComponentIndex>k__BackingField: 0
+  <PredictedSpawn>k__BackingField: {fileID: 0}
+  _networkBehaviours:
+  - {fileID: 0}
+  <ParentNetworkObject>k__BackingField: {fileID: 0}
+  <ChildNetworkObjects>k__BackingField: []
+  SerializedTransformProperties:
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 0}
+    LocalScale: {x: 0, y: 0, z: 0}
+  _isNetworked: 1
+  _isGlobal: 0
+  _initializeOrder: 0
+  _defaultDespawnType: 0
+  NetworkObserver: {fileID: 0}
+  <PrefabId>k__BackingField: 5
+  <SpawnableCollectionId>k__BackingField: 0
+  _scenePathHash: 0
+  <SceneId>k__BackingField: 0
+  <AssetPathHash>k__BackingField: 7034807833290520838
+--- !u!114 &-6444581355816351972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054587146392613960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 1247}
+  _networkObjectCache: {fileID: 0}
+  _componentConfiguration: 0
+  _synchronizeParent: 0
+  _packing:
+    Position: 1
+    Rotation: 1
+    Scale: 0
+  _interpolation: 2
+  _extrapolation: 2
+  _enableTeleport: 0
+  _teleportThreshold: 1
+  _scaleThreshold: 1
+  _clientAuthoritative: 1
+  _sendToOwner: 1
+  _enableNetworkLod: 1
+  _interval: 1
+  _synchronizePosition: 1
+  _positionSnapping:
+    X: 0
+    Y: 0
+    Z: 0
+  _synchronizeRotation: 1
+  _rotationSnapping:
+    X: 0
+    Y: 0
+    Z: 0
+  _synchronizeScale: 1
+  _scaleSnapping:
+    X: 0
+    Y: 0
+    Z: 0
+--- !u!114 &8384447159301111253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6938642748860851052, guid: be2b65901b8dd664599897de73780f5d, type: 3}
+  m_PrefabInstance: {fileID: 1445805656150646457}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a35128610d1b34892726ec96e587d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

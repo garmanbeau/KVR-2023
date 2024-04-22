@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e350f57f1a51d242a304014b212ef10, type: 3}
+  m_Name: RAM 3
+  m_EditorClassIdentifier: 
+  question: What varies between different types of RAM like DDR3 and DDR4?
+  wrongAnswers:
+  - Their color and size
+  - Their weight
+  - The noise they make
+  correctAnswer: Their speed and compatibility with motherboards
+  hint: These differences affect how fast the RAM works and whether it fits with
+    your computer's main circuit board.

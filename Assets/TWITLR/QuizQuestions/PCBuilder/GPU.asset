@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e350f57f1a51d242a304014b212ef10, type: 3}
+  m_Name: GPU
+  m_EditorClassIdentifier: 
+  question: What is the main role of a GPU in a computer?
+  wrongAnswers:
+  - Managing the computer's memory
+  - Processing audio output
+  - Controlling the keyboard and mouse
+  correctAnswer: Rendering graphics and images
+  hint: Think about tasks that require visual details, like games or videos.

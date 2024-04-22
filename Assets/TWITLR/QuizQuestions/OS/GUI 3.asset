@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e350f57f1a51d242a304014b212ef10, type: 3}
+  m_Name: GUI 3
+  m_EditorClassIdentifier: 
+  question: When can you usually customize the GUI, like changing the wallpaper?
+  wrongAnswers:
+  - Before the computer is turned on
+  - During the hardware check
+  - When the BIOS is running
+  correctAnswer: After the boot sequence is complete
+  hint: Customization happens when all basic startup processes are finished.

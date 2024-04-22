@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e350f57f1a51d242a304014b212ef10, type: 3}
+  m_Name: APP
+  m_EditorClassIdentifier: 
+  question: What happens in the application phase of the OS boot sequence?
+  wrongAnswers:
+  - The computer shuts down
+  - The computer only charges its battery
+  - The computer plays music
+  correctAnswer: The computer starts loading everyday programs
+  hint: This phase involves preparing the programs you commonly use.
